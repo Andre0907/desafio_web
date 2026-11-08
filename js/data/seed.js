@@ -1,0 +1,78 @@
+(function (App) {
+  'use strict';
+
+  App.seedReservas = [
+    {
+      placa: 'ABC1D23',
+      proprietario: 'Ana Beatriz Souza',
+      apartamento: '101',
+      bloco: 'A',
+      modelo: 'Fiat Argo',
+      cor: 'Prata',
+      vaga: 2,
+    },
+    {
+      placa: 'BRA2E19',
+      proprietario: 'Carlos Eduardo Lima',
+      apartamento: '203',
+      bloco: 'A',
+      modelo: 'Chevrolet Onix',
+      cor: 'Branco',
+      vaga: 5,
+    },
+    {
+      placa: 'DEF-4567',
+      proprietario: 'Fernanda Almeida',
+      apartamento: '304',
+      bloco: 'B',
+      modelo: 'Toyota Corolla',
+      cor: 'Preto',
+      vaga: 8,
+    },
+    {
+      placa: 'GHI3J45',
+      proprietario: 'João Pedro Martins',
+      apartamento: '102',
+      bloco: 'B',
+      modelo: 'Jeep Renegade',
+      cor: 'Cinza',
+      vaga: 11,
+    },
+    {
+      placa: 'JKL-9012',
+      proprietario: 'Mariana Castro',
+      apartamento: '401',
+      bloco: 'C',
+      modelo: 'Honda Civic',
+      cor: 'Azul',
+      vaga: 15,
+    },
+    {
+      placa: 'MNO4P56',
+      proprietario: 'Rafael Nogueira',
+      apartamento: '205',
+      bloco: 'C',
+      modelo: 'Volkswagen T-Cross',
+      cor: 'Vermelho',
+      vaga: 18,
+    },
+    {
+      placa: 'PQR-7890',
+      proprietario: 'Patrícia Ribeiro',
+      apartamento: '302',
+      bloco: 'D',
+      modelo: 'Hyundai HB20',
+      cor: 'Branco',
+      vaga: 22,
+    },
+    {
+      placa: 'STU7V89',
+      proprietario: 'Thiago Fernandes',
+      apartamento: '403',
+      bloco: 'D',
+      modelo: 'Renault Kwid',
+      cor: 'Laranja',
+      vaga: 27,
+    },
+  ];
+})(window.ParkingApp = window.ParkingApp || {});

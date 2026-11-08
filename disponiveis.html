@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vagas de estacionamento disponíveis no Condomínio Vista Verde.">
+  <title>Vagas disponíveis | Estacionamento Vista Verde</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="index.html" aria-label="Estacionamento Vista Verde - início">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 17h14v-3.2l-1.8-4.3A2 2 0 0 0 15.4 8H8.6a2 2 0 0 0-1.8 1.5L5 13.8V17Z"/>
+            <path d="M5 14h14"/>
+            <circle cx="7.5" cy="17.5" r="1.3"/>
+            <circle cx="16.5" cy="17.5" r="1.3"/>
+          </svg>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Estacionamento</span>
+          <span class="brand__sub">Condomínio Vista Verde</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a class="nav__link" href="index.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Cadastrar reserva
+        </a>
+        <a class="nav__link" href="vagas.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/>
+          </svg>
+          Vagas cadastradas
+        </a>
+        <a class="nav__link is-active" href="disponiveis.html" aria-current="page">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="3" width="7" height="7" rx="1"/>
+            <rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/>
+            <rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+          Vagas disponíveis
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container page">
+    <div class="page__header">
+      <div class="page__heading">
+        <span class="eyebrow">Disponibilidade</span>
+        <h1>Vagas disponíveis</h1>
+        <p>Mapa atualizado do estacionamento. As vagas destacadas em verde estão livres para reserva.</p>
+      </div>
+      <a class="btn btn--primary" href="index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 5v14M5 12h14"/>
+        </svg>
+        Nova reserva
+      </a>
+    </div>
+
+    <section class="stats-row" aria-label="Resumo da disponibilidade">
+      <article class="card stat-mini">
+        <span class="stat-mini__label">Total de vagas</span>
+        <strong class="stat-mini__value" id="disp-total">0</strong>
+      </article>
+      <article class="card stat-mini stat-mini--success">
+        <span class="stat-mini__label">Disponíveis</span>
+        <strong class="stat-mini__value" id="disp-livres">0</strong>
+      </article>
+      <article class="card stat-mini stat-mini--warning">
+        <span class="stat-mini__label">Ocupadas</span>
+        <strong class="stat-mini__value" id="disp-ocupadas">0</strong>
+      </article>
+      <article class="card stat-mini">
+        <span class="stat-mini__label">Disponibilidade</span>
+        <strong class="stat-mini__value" id="disp-percentual">0%</strong>
+      </article>
+    </section>
+
+    <section class="card map-card" aria-labelledby="mapa-title">
+      <div class="map-card__header">
+        <div>
+          <h2 id="mapa-title">Mapa de vagas</h2>
+          <p class="map-card__sub" id="disp-resumo"></p>
+        </div>
+        <div class="legend" aria-label="Legenda">
+          <span><i class="dot dot--free"></i> Disponível</span>
+          <span><i class="dot dot--busy"></i> Ocupada</span>
+        </div>
+      </div>
+
+      <div class="progress progress--lg" aria-hidden="true">
+        <span class="progress__bar" id="disp-barra"></span>
+      </div>
+
+      <div class="grid-vagas" id="grid-vagas"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>Estacionamento Vista Verde</span>
+      <span>Desafio de Desenvolvimento Web · HTML, CSS e JavaScript</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/utils/Formatadores.js"></script>
+  <script src="js/services/StorageService.js"></script>
+  <script src="js/models/Reserva.js"></script>
+  <script src="js/data/seed.js"></script>
+  <script src="js/models/ReservaModel.js"></script>
+  <script src="js/views/DisponiveisView.js"></script>
+  <script src="js/controllers/DisponiveisController.js"></script>
+  <script src="js/pages/disponiveis.js"></script>
+</body>
+</html>
